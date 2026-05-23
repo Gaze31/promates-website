@@ -1,0 +1,63 @@
+# ─── OS ───────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ─── Editors ──────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.user
+*.userprefs
+.project
+.settings/
+nbproject/
+
+# ─── Node (if a build tool is added later) ─
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ─── Build output ─────────────────────────
+dist/
+build/
+out/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.svelte-kit/
+
+# ─── Environment & secrets ────────────────
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ─── Logs ─────────────────────────────────
+logs/
+*.log
+
+# ─── Misc ─────────────────────────────────
+*.bak
+*.tmp
+*.orig
+*.swp
