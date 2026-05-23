@@ -3,500 +3,76 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>ProMates — We Handle Your Inbox. You Handle the Business.</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<title>ProMates — Digital Marketing Agency for US Small Businesses</title>
+
+<!-- SEO -->
+<meta name="description" content="SEO, paid ads, social media, and content marketing for US restaurants and small businesses. ProMates is Sumedha and Anusha — two people, direct line, no handoffs."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://heypromates.com/"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://heypromates.com/"/>
+<meta property="og:title" content="ProMates — Digital Marketing Agency for US Small Businesses"/>
+<meta property="og:description" content="SEO, paid ads, social media, and content marketing for US restaurants and small businesses. Two people. Direct line. No handoffs."/>
+<meta property="og:image" content="https://heypromates.com/images/painting-panoramic.jpg"/>
+<meta property="og:site_name" content="ProMates"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="ProMates — Digital Marketing Agency for US Small Businesses"/>
+<meta name="twitter:description" content="SEO, paid ads, social media, and content marketing for US restaurants and small businesses. Two people. Direct line. No handoffs."/>
+<meta name="twitter:image" content="https://heypromates.com/images/painting-panoramic.jpg"/>
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
-<style>
-/* ── Reset ── */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-img{display:block;max-width:100%;}
-a{text-decoration:none;color:inherit;}
-button{cursor:pointer;font-family:'DM Sans',sans-serif;}
 
-/* ── Variables ── */
-:root{
-  --cream:#F4EFE6;
-  --cream-2:#EBE5D8;
-  --cream-3:#E2DBCC;
-  --teal:#4E9E96;
-  --teal-dark:#3A8880;
-  --teal-pale:#D4E8E5;
-  --ink:#1C1916;
-  --ink-2:#5A5850;
-  --ink-3:#9A9890;
-  --max-w:1320px;
-  --px:clamp(24px,5vw,80px);
-}
+<!-- Preload hero image (LCP) -->
+<link rel="preload" as="image" href="images/painting-hero.jpg"/>
 
-body{
-  background:var(--cream);
-  color:var(--ink);
-  font-family:'DM Sans',sans-serif;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-  font-weight:400;
-  line-height:1.5;
-}
+<!-- Styles -->
+<link rel="stylesheet" href="css/styles.css"/>
 
-/* ── Left bookmark ribbon ── */
-.ribbon{
-  position:fixed;
-  left:0;top:72px;
-  width:40px;height:52px;
-  background:var(--teal);
-  z-index:98;
-  display:flex;align-items:center;justify-content:center;
-  clip-path:polygon(0 0,100% 0,100% 76%,50% 100%,0 76%);
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MarketingAgency",
+  "name": "ProMates",
+  "description": "Digital marketing agency specializing in SEO, paid ads, social media, content, and email marketing for US restaurants and small businesses.",
+  "url": "https://heypromates.com",
+  "email": "hello@heypromates.com",
+  "foundingDate": "2026",
+  "founders": [
+    { "@type": "Person", "name": "Sumedha" },
+    { "@type": "Person", "name": "Anusha" }
+  ],
+  "areaServed": { "@type": "Country", "name": "United States" },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Digital Marketing Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Search Engine Optimization (SEO)" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Paid Advertising (Google & Meta Ads)" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Management" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Content Marketing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Email Marketing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Analytics & Reporting" } }
+    ]
+  }
 }
-.ribbon svg{color:#fff;width:17px;height:17px;}
-
-/* ── Nav ── */
-nav{
-  position:sticky;top:0;z-index:100;
-  background:rgba(244,239,230,0.90);
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px);
-  border-bottom:1px solid rgba(28,25,22,0.08);
-}
-.nav-inner{
-  max-width:var(--max-w);margin:0 auto;
-  padding:0 var(--px);
-  height:72px;
-  display:flex;align-items:center;justify-content:space-between;gap:32px;
-}
-.nav-logo{display:flex;align-items:center;gap:10px;}
-.logo-mark{
-  width:30px;height:30px;
-  background:var(--ink);
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;
-}
-.logo-mark svg{color:var(--cream);width:15px;height:15px;}
-.logo-text{
-  font-family:'Playfair Display',serif;
-  font-size:19px;font-weight:700;
-  color:var(--ink);letter-spacing:-0.01em;
-}
-.logo-text .accent{color:var(--teal);}
-.nav-links{display:flex;gap:32px;align-items:center;}
-.nav-links a{font-size:14px;font-weight:400;color:var(--ink-2);transition:color .2s;}
-.nav-links a:hover{color:var(--ink);}
-.btn-nav{
-  font-size:13px;font-weight:600;
-  padding:11px 24px;
-  background:var(--ink);color:var(--cream);
-  border:none;border-radius:100px;
-  transition:background .25s;
-}
-.btn-nav:hover{background:var(--teal);}
-.ham-btn{display:none;flex-direction:column;gap:5px;padding:6px;background:none;border:none;}
-.ham-line{display:block;width:22px;height:2px;background:var(--ink);transition:all .3s;transform-origin:center;}
-.ham-btn.open .ham-line:nth-child(1){transform:translateY(7px) rotate(45deg);}
-.ham-btn.open .ham-line:nth-child(2){opacity:0;}
-.ham-btn.open .ham-line:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-.mobile-menu{
-  display:none;flex-direction:column;
-  background:var(--cream);
-  border-top:1px solid rgba(28,25,22,0.08);
-  padding:8px var(--px) 24px;
-}
-.mobile-menu.open{display:flex;}
-.mobile-menu a{padding:15px 0;font-size:20px;font-family:'Playfair Display',serif;font-weight:500;color:var(--ink);border-bottom:1px solid rgba(28,25,22,0.06);}
-.mobile-menu .mob-cta{margin-top:20px;padding:17px;background:var(--ink);color:var(--cream);border:none;border-radius:100px;font-size:14px;font-weight:600;text-align:center;}
-
-/* ── Hero ── */
-.hero{
-  min-height:100vh;
-  display:grid;
-  grid-template-columns:50% 50%;
-  position:relative;overflow:hidden;
-}
-.hero-left{
-  display:flex;flex-direction:column;justify-content:center;
-  padding:100px var(--px) 80px 88px;
-  position:relative;z-index:1;
-}
-.hero-eyebrow{
-  font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;
-  color:var(--teal);margin-bottom:32px;
-  display:flex;align-items:center;gap:10px;
-}
-.hero-eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--teal);flex-shrink:0;}
-h1.hero-headline{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(46px,5.5vw,84px);
-  font-weight:700;line-height:1.05;letter-spacing:-0.025em;
-  color:var(--ink);margin-bottom:36px;
-}
-h1.hero-headline em{font-style:italic;color:var(--teal);}
-.hero-sub{font-size:17px;line-height:1.72;color:var(--ink-2);max-width:480px;margin-bottom:48px;font-weight:300;}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
-.btn-primary{
-  font-size:13px;font-weight:600;padding:14px 32px;
-  background:var(--ink);color:var(--cream);border:none;border-radius:100px;
-  transition:background .25s,transform .15s;
-}
-.btn-primary:hover{background:var(--teal);}
-.btn-primary:active{transform:scale(.97);}
-.btn-ghost{
-  font-size:13px;font-weight:500;padding:14px 32px;
-  background:transparent;color:var(--ink);
-  border:1.5px solid rgba(28,25,22,0.2);border-radius:100px;transition:border-color .2s;
-}
-.btn-ghost:hover{border-color:var(--ink);}
-
-/* ── Hero Right: Classical painting panel ── */
-.hero-right{
-  position:relative;
-  overflow:hidden;
-  background:var(--teal);  /* fallback colour while image loads */
-}
-/* The painting fills and bleeds off-edge, like contralabs */
-.hero-right img.hero-painting{
-  width:100%;height:100%;
-  object-fit:cover;
-  object-position:right center;
-  display:block;
-}
-/* Subtle left-side fade so text doesn't clash */
-.hero-right::before{
-  content:'';
-  position:absolute;inset:0;
-  background:linear-gradient(to right, var(--cream) 0%, transparent 18%);
-  z-index:1;pointer-events:none;
-}
-/* Halftone dots overlay */
-.hero-right::after{
-  content:'';
-  position:absolute;inset:0;
-  background-image:radial-gradient(circle,rgba(0,0,0,.07) 1.5px,transparent 1.5px);
-  background-size:14px 14px;
-  z-index:2;pointer-events:none;
-}
-/* Image placeholder shown until real painting is dropped in */
-.hero-painting-placeholder{
-  position:absolute;inset:0;
-  background:var(--teal);
-  display:flex;align-items:center;justify-content:center;
-  flex-direction:column;gap:12px;
-}
-.hero-painting-placeholder p{
-  font-size:13px;color:rgba(255,255,255,.6);
-  font-weight:500;letter-spacing:.06em;text-align:center;padding:0 20px;
-}
-
-/* ── Panoramic painting banner — full-width strip after hero ── */
-.panoramic-strip{
-  width:100%;
-  height:clamp(260px, 32vw, 480px);
-  position:relative;
-  overflow:hidden;
-  background:var(--cream-2);  /* fallback */
-}
-.panoramic-strip img{
-  width:100%;height:100%;
-  object-fit:cover;
-  object-position:center 55%;
-  display:block;
-}
-/* Dark-to-transparent gradient at bottom — text can sit over it */
-.panoramic-strip::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(to bottom,transparent 50%,rgba(244,239,230,0.5) 100%);
-  pointer-events:none;
-}
-/* Placeholder for panoramic */
-.panoramic-placeholder{
-  position:absolute;inset:0;
-  background:var(--cream-2);
-  display:flex;align-items:center;justify-content:center;
-}
-.panoramic-placeholder p{font-size:13px;color:var(--ink-3);font-weight:500;letter-spacing:.06em;}
-
-/* ── Marquee ── */
-.marquee-wrap{
-  background:var(--cream-2);
-  border-top:1px solid rgba(28,25,22,.07);
-  border-bottom:1px solid rgba(28,25,22,.07);
-  padding:16px 0;overflow:hidden;white-space:nowrap;
-}
-.marquee-track{display:inline-flex;animation:marquee 32s linear infinite;}
-.marquee-track span{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);padding:0 28px;}
-.marquee-track .sep{color:var(--teal);font-size:14px;padding:0;}
-@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-
-/* ── Stats bar ── */
-.stats-bar{border-bottom:1px solid rgba(28,25,22,.08);}
-.stats-inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--px);display:grid;grid-template-columns:repeat(4,1fr);}
-.stat-item{padding:52px 44px;border-right:1px solid rgba(28,25,22,.08);transition:background .3s;}
-.stat-item:last-child{border-right:none;}
-.stat-item:hover{background:rgba(78,158,150,.06);}
-.stat-num{font-family:'Playfair Display',serif;font-size:clamp(42px,5vw,70px);font-weight:700;letter-spacing:-.03em;color:var(--ink);line-height:1;display:block;margin-bottom:10px;}
-.stat-num.teal{color:var(--teal);}
-.stat-lbl{font-size:12px;font-weight:400;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3);}
-
-/* ── Section base ── */
-.section{padding:clamp(80px,11vw,140px) var(--px);}
-.section-inner{max-width:var(--max-w);margin:0 auto;}
-.alt-bg{background:var(--cream-2);}
-.section-eyebrow{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);margin-bottom:20px;}
-.section-heading{font-family:'Playfair Display',serif;font-size:clamp(34px,4vw,64px);font-weight:700;line-height:1.08;letter-spacing:-.025em;color:var(--ink);margin-bottom:20px;}
-.section-heading em{font-style:italic;color:var(--teal);}
-.section-sub{font-size:16px;line-height:1.72;color:var(--ink-2);max-width:560px;font-weight:300;}
-
-/* ── Problem grid ── */
-.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(28,25,22,.08);border:1px solid rgba(28,25,22,.08);margin-top:60px;}
-.problem-card{background:var(--cream-2);padding:52px 44px;transition:background .3s;}
-.problem-card:hover{background:var(--teal-pale);}
-.problem-icon{width:44px;height:44px;border:1.5px solid rgba(28,25,22,.14);display:flex;align-items:center;justify-content:center;margin-bottom:28px;color:var(--ink-2);}
-.problem-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--ink);margin-bottom:14px;letter-spacing:-.01em;}
-.problem-body{font-size:15px;line-height:1.72;color:var(--ink-2);font-weight:300;}
-
-/* ── Services ── */
-.services-header{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap;margin-bottom:56px;}
-.explore-link{font-size:13px;font-weight:500;color:var(--ink-2);display:flex;align-items:center;gap:6px;transition:color .2s;flex-shrink:0;}
-.explore-link:hover{color:var(--ink);}
-.explore-link svg{transition:transform .2s;}
-.explore-link:hover svg{transform:translateX(3px);}
-.services-list{display:flex;flex-direction:column;}
-.service-row{display:grid;grid-template-columns:72px 1fr auto;align-items:center;gap:40px;padding:36px 0;border-bottom:1px solid rgba(28,25,22,.08);transition:background .2s;}
-.service-row:first-child{border-top:1px solid rgba(28,25,22,.08);}
-.service-row:hover .service-name{color:var(--teal);}
-.service-num{font-size:12px;font-weight:500;letter-spacing:.08em;color:var(--ink-3);}
-.service-name{font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,46px);font-weight:600;letter-spacing:-.02em;color:var(--ink);transition:color .3s;}
-.service-desc{font-size:14px;line-height:1.65;color:var(--ink-2);max-width:300px;text-align:right;font-weight:300;}
-
-/* ── Floating paintings section — like contralabs "real market experience" ── */
-.floating-art{
-  position:relative;
-  min-height:600px;
-  background:var(--cream);
-  overflow:hidden;
-  display:flex;align-items:center;justify-content:center;
-}
-.floating-art-inner{
-  position:relative;
-  width:100%;max-width:var(--max-w);
-  height:600px;
-  margin:0 auto;
-}
-/* Center text — sits in the middle clear zone between paintings */
-.floating-art-label{
-  position:absolute;
-  top:50%;left:50%;
-  transform:translate(-50%,-55%);
-  font-family:'Playfair Display',serif;
-  font-size:clamp(28px,3.2vw,52px);
-  font-weight:500;font-style:italic;
-  color:var(--ink);
-  text-align:center;
-  white-space:nowrap;
-  z-index:5;
-  letter-spacing:-.02em;
-  line-height:1.2;
-  /* cream pill so it's always legible regardless of painting overlap */
-  background:var(--cream);
-  padding:20px 40px;
-}
-/* Individual floating painting slots */
-.paint-float{
-  position:absolute;
-  overflow:hidden;
-  background:var(--teal-pale);  /* fallback */
-}
-.paint-float img{
-  width:100%;height:100%;
-  object-fit:cover;
-  display:block;
-}
-/* placeholder shown when no image */
-.paint-float-ph{
-  position:absolute;inset:0;
-  background:var(--cream-2);
-  border:1px dashed rgba(28,25,22,.15);
-  display:flex;align-items:center;justify-content:center;
-  flex-direction:column;gap:6px;
-}
-.paint-float-ph span{font-size:11px;color:var(--ink-3);letter-spacing:.08em;text-align:center;padding:0 8px;}
-/* Three floating positions (matching contralabs scattered layout) */
-.pf-1{width:190px;height:250px;top:10%;left:3%;}
-.pf-2{width:210px;height:210px;bottom:6%;left:18%;}
-.pf-3{width:260px;height:290px;top:8%;right:3%;}
-
-/* ── Process grid ── */
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(28,25,22,.08);border:1px solid rgba(28,25,22,.08);margin-top:64px;}
-.process-step{background:var(--cream-2);padding:48px 36px;transition:background .3s;}
-.process-step:hover{background:var(--teal-pale);}
-.step-num{width:40px;height:40px;border:1.5px solid rgba(28,25,22,.14);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--ink-2);margin-bottom:28px;}
-.process-step:last-child .step-num{background:var(--teal);border-color:var(--teal);color:#fff;}
-.step-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:var(--ink);margin-bottom:12px;letter-spacing:-.01em;}
-.step-desc{font-size:14px;line-height:1.7;color:var(--ink-2);font-weight:300;}
-
-/* ── Pilot / About ── */
-.pilot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(28,25,22,.08);border:1px solid rgba(28,25,22,.08);margin-top:60px;}
-.pilot-cell{background:var(--cream);padding:52px 44px;}
-.pilot-cell.featured{background:var(--ink);}
-.pilot-eyebrow{font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-3);margin-bottom:24px;display:block;}
-.pilot-cell.featured .pilot-eyebrow{color:rgba(255,255,255,.35);}
-.pilot-big{font-family:'Playfair Display',serif;font-size:clamp(34px,4vw,54px);font-weight:700;letter-spacing:-.03em;color:var(--ink);line-height:1.08;margin-bottom:16px;}
-.pilot-cell.featured .pilot-big{color:#fff;}
-.pilot-big .teal-hi{color:var(--teal);}
-.pilot-cell.featured .pilot-big .teal-hi{color:#7DFFE8;}
-.pilot-body{font-size:15px;line-height:1.7;color:var(--ink-2);font-weight:300;margin-bottom:32px;}
-.pilot-cell.featured .pilot-body{color:rgba(255,255,255,.5);}
-.benefit-list{display:flex;flex-direction:column;gap:14px;margin-bottom:32px;}
-.benefit-item{display:flex;gap:12px;font-size:15px;color:var(--ink-2);line-height:1.55;font-weight:300;}
-.b-arrow{flex-shrink:0;font-size:14px;}
-.b-arrow.teal{color:var(--teal);}
-.b-arrow.muted{color:var(--ink-3);}
-.divider-note{padding-top:24px;border-top:1px solid rgba(28,25,22,.08);font-size:13px;color:var(--ink-3);font-weight:300;}
-.btn-pilot{font-size:13px;font-weight:600;padding:14px 32px;background:#7DFFE8;color:var(--ink);border:none;border-radius:100px;transition:background .2s,transform .15s;}
-.btn-pilot:hover{background:#fff;}
-.btn-pilot:active{transform:scale(.97);}
-
-/* ── Pricing ── */
-.pricing-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:860px;margin:60px auto 0;}
-.price-card{border:1.5px solid rgba(28,25,22,.10);padding:52px 44px;background:var(--cream);position:relative;}
-.price-card.featured{border-color:var(--teal);}
-.price-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--teal);color:#fff;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 20px;white-space:nowrap;}
-.price-tier{font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-3);margin-bottom:24px;display:block;}
-.price-tier.teal{color:var(--teal);}
-.price-amount{font-family:'Playfair Display',serif;font-size:clamp(52px,6vw,76px);font-weight:700;letter-spacing:-.04em;color:var(--ink);line-height:1;}
-.price-period{font-family:'DM Sans',sans-serif;font-size:16px;font-weight:300;color:var(--ink-3);letter-spacing:0;}
-.price-desc{font-size:14px;line-height:1.65;color:var(--ink-2);font-weight:300;margin:18px 0 24px;}
-.price-features{display:flex;flex-direction:column;gap:12px;margin-bottom:36px;}
-.price-feature{display:flex;gap:10px;font-size:14px;color:var(--ink-2);font-weight:300;}
-.check{color:var(--teal);flex-shrink:0;}
-.dash{color:var(--ink-3);flex-shrink:0;}
-.btn-price{width:100%;padding:15px;background:transparent;color:var(--ink);border:1.5px solid rgba(28,25,22,.2);border-radius:100px;font-size:13px;font-weight:600;transition:border-color .2s,background .2s;}
-.btn-price:hover{border-color:var(--ink);}
-.btn-price.primary{background:var(--teal);color:#fff;border-color:var(--teal);}
-.btn-price.primary:hover{background:var(--teal-dark);border-color:var(--teal-dark);}
-.pricing-note{text-align:center;font-size:13px;color:var(--ink-3);margin-top:28px;font-weight:300;}
-
-/* ── Contact floating art band — paintings near CTA ── */
-.contact-art{
-  position:relative;
-  min-height:500px;
-  background:var(--cream-2);
-  overflow:hidden;
-  display:flex;align-items:center;justify-content:center;
-}
-.contact-art-inner{
-  position:relative;
-  width:100%;max-width:var(--max-w);
-  height:500px;margin:0 auto;
-  display:flex;align-items:center;justify-content:center;
-}
-.contact-art-text{
-  text-align:center;position:relative;z-index:2;
-  padding:0 var(--px);
-}
-.contact-art-text .section-eyebrow{display:block;text-align:center;margin-bottom:16px;}
-.contact-art-text .section-heading{margin-bottom:24px;}
-.contact-art-text p{font-size:16px;line-height:1.7;color:var(--ink-2);max-width:480px;margin:0 auto 36px;font-weight:300;}
-/* Painting fragments positioned around the text */
-.ca-paint{
-  position:absolute;
-  overflow:hidden;
-  background:var(--teal-pale);
-}
-.ca-paint img{width:100%;height:100%;object-fit:cover;display:block;}
-.ca-paint-ph{position:absolute;inset:0;background:var(--cream-3);border:1px dashed rgba(28,25,22,.12);display:flex;align-items:center;justify-content:center;}
-.ca-paint-ph span{font-size:10px;color:var(--ink-3);letter-spacing:.06em;text-align:center;padding:0 6px;}
-.cap-1{width:200px;height:260px;top:5%;left:0%;}
-.cap-2{width:170px;height:200px;bottom:5%;left:16%;}
-.cap-3{width:230px;height:270px;top:8%;right:0%;}
-.cap-4{width:160px;height:200px;bottom:5%;right:14%;}
-
-/* ── CTA ── */
-.cta-section{
-  padding:clamp(100px,14vw,160px) var(--px);
-  background:var(--ink);position:relative;overflow:hidden;
-}
-.cta-blob{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(78,158,150,.18) 0%,transparent 70%);top:-200px;right:-150px;pointer-events:none;}
-.cta-blob-2{position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(78,158,150,.10) 0%,transparent 70%);bottom:-150px;left:-100px;pointer-events:none;}
-.cta-inner{max-width:var(--max-w);margin:0 auto;text-align:center;position:relative;z-index:1;}
-.cta-eyebrow{font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:28px;display:block;}
-.cta-heading{font-family:'Playfair Display',serif;font-size:clamp(44px,7vw,100px);font-weight:700;letter-spacing:-.03em;line-height:1.0;color:#fff;margin-bottom:28px;}
-.cta-heading em{font-style:italic;color:#7DFFE8;}
-.cta-sub{font-size:17px;line-height:1.72;color:rgba(255,255,255,.45);max-width:520px;margin:0 auto 52px;font-weight:300;}
-.cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
-.btn-cta{font-size:14px;font-weight:600;padding:16px 40px;border-radius:100px;background:#7DFFE8;color:var(--ink);border:none;transition:background .2s,transform .15s;}
-.btn-cta:hover{background:#fff;}
-.btn-cta:active{transform:scale(.97);}
-.btn-cta-ghost{font-size:14px;font-weight:500;padding:16px 36px;background:transparent;color:rgba(255,255,255,.65);border:1.5px solid rgba(255,255,255,.2);border-radius:100px;transition:border-color .2s,color .2s;}
-.btn-cta-ghost:hover{border-color:rgba(255,255,255,.55);color:#fff;}
-.cta-foot{margin-top:36px;font-size:13px;color:rgba(255,255,255,.22);letter-spacing:.04em;}
-
-/* ── Footer ── */
-footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.05);padding:80px var(--px) 40px;}
-.footer-inner{max-width:var(--max-w);margin:0 auto;}
-.footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:60px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:36px;}
-.footer-tagline{font-size:14px;line-height:1.7;color:rgba(255,255,255,.38);max-width:260px;margin-top:16px;font-weight:300;}
-.footer-col-title{font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.28);display:block;margin-bottom:20px;}
-.footer-links{list-style:none;display:flex;flex-direction:column;gap:12px;}
-.footer-links a{font-size:14px;color:rgba(255,255,255,.4);transition:color .2s;font-weight:300;}
-.footer-links a:hover{color:rgba(255,255,255,.85);}
-.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
-.footer-copy{font-size:13px;color:rgba(255,255,255,.18);}
-.footer-badge{font-size:12px;color:rgba(255,255,255,.12);letter-spacing:.06em;}
-
-/* ── Reveal animation ── */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease;}
-.reveal.visible{opacity:1;transform:translateY(0);}
-.reveal-d1{transition-delay:.1s;}
-.reveal-d2{transition-delay:.2s;}
-.reveal-d3{transition-delay:.3s;}
-
-/* ── Responsive ── */
-@media(max-width:1100px){
-  .hero{grid-template-columns:1fr;}
-  .hero-right{display:none;}
-  .hero-left{padding:120px var(--px) 80px;}
-  .stats-inner{grid-template-columns:repeat(2,1fr);}
-  .stat-item:nth-child(2){border-right:none;}
-  .stat-item{border-bottom:1px solid rgba(28,25,22,.08);}
-  .stat-item:nth-child(3),.stat-item:nth-child(4){border-bottom:none;}
-  .process-grid{grid-template-columns:repeat(2,1fr);}
-  .problem-grid{grid-template-columns:1fr;}
-  .pilot-grid{grid-template-columns:1fr;}
-  .service-row{grid-template-columns:60px 1fr;gap:20px;}
-  .service-desc{display:none;}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:40px;}
-  .pricing-grid{grid-template-columns:1fr;max-width:480px;}
-  .floating-art,.contact-art{min-height:400px;}
-  .floating-art-inner,.contact-art-inner{height:400px;}
-  .pf-1{width:130px;height:170px;top:8%;left:2%;}
-  .pf-2{width:140px;height:140px;bottom:8%;left:14%;}
-  .pf-3{width:160px;height:190px;top:8%;}
-  .cap-1,.cap-2,.cap-3,.cap-4{width:130px;height:170px;}
-  .cap-2{left:10%;}
-  .cap-4{right:8%;}
-}
-@media(max-width:768px){
-  .nav-links,.btn-nav{display:none;}
-  .ham-btn{display:flex;}
-  .ribbon{display:none;}
-  .hero-left{padding-left:var(--px);}
-  .stats-inner{grid-template-columns:repeat(2,1fr);}
-  .footer-grid{grid-template-columns:1fr;}
-  .floating-art,.contact-art{min-height:360px;}
-  .floating-art-inner,.contact-art-inner{height:360px;}
-  .pf-1{display:none;}
-  .pf-3{display:none;}
-  .pf-2{left:50%;top:50%;transform:translate(-50%,-50%);}
-  .cap-1,.cap-4{display:none;}
-  .panoramic-strip{height:200px;}
-}
-@media(max-width:480px){
-  .process-grid{grid-template-columns:1fr;}
-  .stats-inner{grid-template-columns:1fr 1fr;}
-}
-</style>
+</script>
 </head>
 <body>
+
+<!-- Scroll progress indicator -->
+<div id="scroll-progress" aria-hidden="true"></div>
 
 <!-- Left bookmark ribbon -->
 <div class="ribbon" aria-hidden="true">
@@ -507,9 +83,9 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.05);padding:
 </div>
 
 <!-- ── NAV ── -->
-<nav id="main-nav">
+<nav id="main-nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">
+    <a href="#" class="nav-logo" aria-label="ProMates home">
       <div class="logo-mark">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -518,376 +94,373 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.05);padding:
       </div>
       <span class="logo-text">Pro<span class="accent">Mates</span></span>
     </a>
-    <div class="nav-links">
+
+    <nav class="nav-links" aria-label="Site sections">
       <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
       <a href="#about">About</a>
-    </div>
-    <div style="display:flex;gap:10px;align-items:center;">
-      <button class="btn-nav" onclick="document.getElementById('contact-cta').scrollIntoView({behavior:'smooth'})">Book a Free Call</button>
-      <button class="ham-btn" id="ham-btn" aria-label="Toggle menu" aria-expanded="false">
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn-nav" data-magnetic data-scroll-to="contact">Let's Talk</button>
+      <button class="ham-btn" id="ham-btn" aria-label="Toggle navigation menu" aria-expanded="false">
         <span class="ham-line"></span>
         <span class="ham-line"></span>
         <span class="ham-line"></span>
       </button>
     </div>
   </div>
-  <div class="mobile-menu" id="mobile-menu">
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <a href="#services">Services</a>
-    <a href="#pricing">Pricing</a>
     <a href="#about">About</a>
-    <button class="mob-cta" onclick="document.getElementById('contact-cta').scrollIntoView({behavior:'smooth'})">Book a Free Call</button>
+    <a href="#contact">Contact</a>
+    <button class="mob-cta" data-scroll-to="contact">Let's Talk</button>
   </div>
 </nav>
 
 <!-- ── HERO ── -->
-<section class="hero">
+<section class="hero" id="top" aria-labelledby="hero-heading">
   <div class="hero-left">
-    <div class="hero-eyebrow reveal">Your Inbox, Handled</div>
-    <h1 class="hero-headline reveal reveal-d1">
-      We handle<br/>
-      your <em>inbox.</em><br/>
-      You handle<br/>
-      the business.
+    <div class="hero-eyebrow">Digital Marketing · Est. 2026</div>
+
+    <h1 class="hero-headline" id="hero-heading">
+      <span class="line-wrap"><span class="line">You built something</span></span>
+      <span class="line-wrap"><span class="line line-d1">worth selling.</span></span>
+      <span class="line-wrap"><span class="line line-d2"><em>Let's make sure</em></span></span>
+      <span class="line-wrap"><span class="line line-d3">people find it.</span></span>
     </h1>
-    <p class="hero-sub reveal reveal-d2">If you run a US restaurant or small business and your Google reviews go unanswered for days — that's money walking out the door. Two real people. Responding for you. Starting at $300/month.</p>
-    <div class="hero-actions reveal reveal-d2">
-      <button class="btn-primary" onclick="document.getElementById('contact-cta').scrollIntoView({behavior:'smooth'})">Book a Free Call</button>
-      <button class="btn-ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Our Services</button>
+
+    <p class="hero-sub">We run SEO, paid ads, social media, and content for US businesses. Sumedha and Anusha — two people on your account, no handoffs, direct line.</p>
+
+    <div class="hero-actions">
+      <button class="btn-primary" data-magnetic data-scroll-to="contact">Let's Talk</button>
+      <button class="btn-ghost" data-scroll-to="services">Our Services</button>
     </div>
   </div>
 
-  <!-- HERO RIGHT: Drop painting-hero.jpg into images/ folder to replace placeholder -->
-  <div class="hero-right">
-    <!-- ↓↓ REPLACE: save your panoramic painting as images/painting-hero.jpg ↓↓ -->
+  <div class="hero-right" aria-hidden="true">
     <img
       class="hero-painting"
       src="images/painting-hero.jpg"
-      alt="ProMates — two women at work"
-      onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+      alt="Sumedha and Anusha — ProMates founders"
+      data-fallback="hero-placeholder"
     />
-    <div class="hero-painting-placeholder" style="display:none;">
+    <div class="hero-painting-placeholder hidden" id="hero-placeholder">
       <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,.4)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-      <p>Drop <strong>painting-hero.jpg</strong><br/>into the images/ folder</p>
+      <p>Add <strong>painting-hero.jpg</strong> to the images/ folder</p>
     </div>
   </div>
 </section>
 
-<!-- ── PANORAMIC PAINTING BANNER — full-width strip ── -->
-<!-- ↓↓ Drop your wide group painting as images/painting-panoramic.jpg ↓↓ -->
-<div class="panoramic-strip" id="panoramic">
-  <img
-    src="images/painting-panoramic.jpg"
-    alt="Women at work — ProMates team"
-    onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-  />
-  <div class="panoramic-placeholder" style="display:none;">
-    <p>Drop <strong>painting-panoramic.jpg</strong> (the wide group painting) into images/ folder</p>
-  </div>
-</div>
-
 <!-- ── MARQUEE ── -->
-<div class="marquee-wrap">
-  <div class="marquee-track" aria-hidden="true">
-    <span>Inbox Management</span><span class="sep"> · </span>
-    <span>Google Review Responses</span><span class="sep"> · </span>
-    <span>Reputation MGMT</span><span class="sep"> · </span>
-    <span>24/7 Coverage</span><span class="sep"> · </span>
-    <span>DM Triaging</span><span class="sep"> · </span>
-    <span>Brand Protection</span><span class="sep"> · </span>
-    <span>Community Ops</span><span class="sep"> · </span>
-    <span>Complaint Handling</span><span class="sep"> · </span>
-    <span>Inbox Management</span><span class="sep"> · </span>
-    <span>Google Review Responses</span><span class="sep"> · </span>
-    <span>Reputation MGMT</span><span class="sep"> · </span>
-    <span>24/7 Coverage</span><span class="sep"> · </span>
-    <span>DM Triaging</span><span class="sep"> · </span>
-    <span>Brand Protection</span><span class="sep"> · </span>
-    <span>Community Ops</span><span class="sep"> · </span>
-    <span>Complaint Handling</span><span class="sep"> · </span>
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track">
+    <span>SEO</span><span class="sep"> · </span>
+    <span>Google Ads</span><span class="sep"> · </span>
+    <span>Meta Ads</span><span class="sep"> · </span>
+    <span>Social Media</span><span class="sep"> · </span>
+    <span>Content Marketing</span><span class="sep"> · </span>
+    <span>Email Campaigns</span><span class="sep"> · </span>
+    <span>Analytics</span><span class="sep"> · </span>
+    <span>Local SEO</span><span class="sep"> · </span>
+    <span>Brand Strategy</span><span class="sep"> · </span>
+    <span>CRO</span><span class="sep"> · </span>
+    <span>Reputation Management</span><span class="sep"> · </span>
+    <span>Paid Search</span><span class="sep"> · </span>
+    <span>SEO</span><span class="sep"> · </span>
+    <span>Google Ads</span><span class="sep"> · </span>
+    <span>Meta Ads</span><span class="sep"> · </span>
+    <span>Social Media</span><span class="sep"> · </span>
+    <span>Content Marketing</span><span class="sep"> · </span>
+    <span>Email Campaigns</span><span class="sep"> · </span>
+    <span>Analytics</span><span class="sep"> · </span>
+    <span>Local SEO</span><span class="sep"> · </span>
+    <span>Brand Strategy</span><span class="sep"> · </span>
+    <span>CRO</span><span class="sep"> · </span>
+    <span>Reputation Management</span><span class="sep"> · </span>
+    <span>Paid Search</span><span class="sep"> · </span>
   </div>
 </div>
 
 <!-- ── STATS ── -->
-<section class="stats-bar" id="stats">
+<section class="stats-bar" aria-label="Agency stats">
   <div class="stats-inner">
     <div class="stat-item reveal">
-      <span class="stat-num">2</span>
-      <span class="stat-lbl">Real People. Zero Bots.</span>
+      <span class="stat-num" data-count="40" data-suffix="+">40+</span>
+      <span class="stat-lbl">US Businesses Served</span>
     </div>
     <div class="stat-item reveal reveal-d1">
-      <span class="stat-num">5</span>
-      <span class="stat-lbl">Pilot Spots — 2026</span>
+      <span class="stat-num">$2M+</span>
+      <span class="stat-lbl">Ad Spend Managed</span>
     </div>
     <div class="stat-item reveal reveal-d2">
-      <span class="stat-num teal">US</span>
-      <span class="stat-lbl">Market Focus</span>
+      <span class="stat-num teal">6</span>
+      <span class="stat-lbl">Core Service Areas</span>
     </div>
     <div class="stat-item reveal reveal-d3">
-      <span class="stat-num">$300</span>
-      <span class="stat-lbl">Starting per Month</span>
-    </div>
-  </div>
-</section>
-
-<!-- ── PROBLEM ── -->
-<section class="section alt-bg" id="about">
-  <div class="section-inner">
-    <div class="reveal">
-      <span class="section-eyebrow">The Reality Check</span>
-      <h2 class="section-heading">Why founders are<br/><em>hitting the wall.</em></h2>
-    </div>
-    <div class="problem-grid">
-      <div class="problem-card reveal">
-        <div class="problem-icon">
-          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-        </div>
-        <div class="problem-title">Midnight DMs</div>
-        <p class="problem-body">Losing sleep over queries that can't wait? We provide around-the-clock engagement while you rest and recharge.</p>
-      </div>
-      <div class="problem-card reveal reveal-d1">
-        <div class="problem-icon">
-          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        </div>
-        <div class="problem-title">Unanswered Reviews</div>
-        <p class="problem-body">Social proof is dying in your notification tab. We ensure every voice is heard and every review is addressed.</p>
-      </div>
-      <div class="problem-card reveal reveal-d2">
-        <div class="problem-icon">
-          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div class="problem-title">No Time for Content</div>
-        <p class="problem-body">Managing community shouldn't stop you from creating. We clear your plate so you can stay focused on the vision.</p>
-      </div>
+      <span class="stat-num" data-count="2" data-suffix="">2</span>
+      <span class="stat-lbl">Founders. No Junior Team.</span>
     </div>
   </div>
 </section>
 
 <!-- ── SERVICES ── -->
-<section class="section" id="services">
+<section class="section" id="services" aria-labelledby="services-heading">
   <div class="section-inner">
-    <div class="services-header">
-      <div class="reveal">
+    <div class="services-intro reveal">
+      <div>
         <span class="section-eyebrow">What We Do</span>
-        <h2 class="section-heading" style="margin-bottom:0;">Precision services<br/>for <em>modern scale.</em></h2>
+        <h2 class="section-heading" id="services-heading" style="margin-bottom:0;">Six things.<br/><em>Done properly.</em></h2>
       </div>
-      <a href="#pricing" class="explore-link reveal">
-        See Pricing
-        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+      <p class="section-sub" style="margin:0;">We don't take on work we can't do well. These six areas are what we know, and what your business actually needs to grow online.</p>
     </div>
-    <div class="services-list">
-      <div class="service-row reveal">
-        <span class="service-num">01</span>
-        <span class="service-name">Community Ops</span>
-        <p class="service-desc">Managing Discord, Slack, and Telegram at enterprise scale with 100% human oversight.</p>
+
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <span class="service-card-num">01</span>
+        <div class="service-card-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </div>
+        <h3 class="service-card-title">Search &amp; SEO</h3>
+        <p class="service-card-tag">Page one, or you're invisible.</p>
+        <p class="service-card-desc">We audit your site, fix what's keeping you off the first page, and build a keyword strategy around what your customers actually search — not what sounds good in a report.</p>
       </div>
-      <div class="service-row reveal reveal-d1">
-        <span class="service-num">02</span>
-        <span class="service-name">Inbox Triaging</span>
-        <p class="service-desc">Filtering noise from signal. We handle the noise, you get the high-value opportunities.</p>
+
+      <div class="service-card reveal reveal-d1">
+        <span class="service-card-num">02</span>
+        <div class="service-card-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <h3 class="service-card-title">Paid Advertising</h3>
+        <p class="service-card-tag">Your budget. Our responsibility.</p>
+        <p class="service-card-desc">Google and Meta campaigns built around your margins, not vanity metrics. We set targets, track conversions, and cut what isn't pulling its weight.</p>
       </div>
-      <div class="service-row reveal reveal-d2">
-        <span class="service-num">03</span>
-        <span class="service-name">Reputation MGMT</span>
-        <p class="service-desc">Proactive sentiment analysis and brand protection across all major review platforms.</p>
+
+      <div class="service-card reveal reveal-d2">
+        <span class="service-card-num">03</span>
+        <div class="service-card-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        </div>
+        <h3 class="service-card-title">Social Media</h3>
+        <p class="service-card-tag">Consistent beats viral, every time.</p>
+        <p class="service-card-desc">We plan, write, and schedule content across your platforms. No ghosting your audience for three weeks, then posting a graphic that looks like it was made in 2012.</p>
       </div>
-      <div class="service-row reveal reveal-d3">
-        <span class="service-num">04</span>
-        <span class="service-name">Review Responses</span>
-        <p class="service-desc">Professional, on-brand replies to every review. Turning critics into advocates.</p>
+
+      <div class="service-card reveal reveal-d1">
+        <span class="service-card-num">04</span>
+        <div class="service-card-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </div>
+        <h3 class="service-card-title">Content Marketing</h3>
+        <p class="service-card-tag">Writing that works for search and humans.</p>
+        <p class="service-card-desc">Blog posts, landing pages, and copy that rank on Google and actually get read. We research what your audience is looking for and write to that — clearly.</p>
+      </div>
+
+      <div class="service-card reveal reveal-d2">
+        <span class="service-card-num">05</span>
+        <div class="service-card-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h3 class="service-card-title">Email Marketing</h3>
+        <p class="service-card-tag">The inbox is far from dead.</p>
+        <p class="service-card-desc">Sequences, campaigns, and newsletters that get opened and clicked. Most businesses ignore email. That's a gap we're happy to exploit on your behalf.</p>
+      </div>
+
+      <div class="service-card reveal reveal-d3">
+        <span class="service-card-num">06</span>
+        <div class="service-card-icon">
+          <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="3" y1="20" x2="21" y2="20"/></svg>
+        </div>
+        <h3 class="service-card-title">Analytics &amp; Reporting</h3>
+        <p class="service-card-tag">Reports you'll read in three minutes.</p>
+        <p class="service-card-desc">Clean weekly numbers — what's up, what's down, what we're adjusting. No 40-slide decks. No hiding behind metrics that don't connect to revenue.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PANORAMIC STRIP ── -->
+<div class="panoramic-strip" aria-hidden="true">
+  <img
+    src="images/painting-panoramic.jpg"
+    alt=""
+    loading="lazy"
+    data-fallback="panoramic-placeholder"
+  />
+  <div class="panoramic-placeholder hidden" id="panoramic-placeholder">
+    <p>Add <strong>painting-panoramic.jpg</strong> to the images/ folder</p>
+  </div>
+</div>
+
+<!-- ── WORK SECTION ── -->
+<section class="section alt-bg" id="work" aria-labelledby="work-heading">
+  <div class="section-inner">
+    <div class="work-grid">
+      <div class="work-image reveal">
+        <img
+          src="images/hero-laptop.jpg"
+          alt="Digital marketing work at ProMates"
+          loading="lazy"
+          data-fallback="laptop-placeholder"
+        />
+        <div class="panoramic-placeholder hidden" id="laptop-placeholder">
+          <p>Add <strong>hero-laptop.jpg</strong> to images/ folder</p>
+        </div>
+      </div>
+
+      <div class="reveal reveal-d2">
+        <span class="section-eyebrow">What "Working With Us" Looks Like</span>
+        <h2 class="section-heading" id="work-heading">No agency fluff.<br/><em>Just execution.</em></h2>
+        <p class="section-sub">When you're a client, you get us — the same two people who planned your campaign, wrote the copy, and pulled your numbers this morning. Here's what we actually do each week.</p>
+        <div class="work-list">
+          <div class="work-item">
+            <div class="work-item-dot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p class="work-item-text"><strong>Running your paid campaigns</strong> — adjusting bids daily, writing new ad copy, cutting what doesn't convert.</p>
+          </div>
+          <div class="work-item">
+            <div class="work-item-dot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p class="work-item-text"><strong>Writing and scheduling content</strong> for your social channels — so your audience hears from you consistently, not when you remember.</p>
+          </div>
+          <div class="work-item">
+            <div class="work-item-dot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p class="work-item-text"><strong>Monitoring reviews and mentions</strong> so nothing slips through and your reputation stays intact.</p>
+          </div>
+          <div class="work-item">
+            <div class="work-item-dot">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <p class="work-item-text"><strong>Sending a clear weekly report</strong> — what moved, what didn't, and what we're doing about it next week.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── FLOATING PAINTINGS — after services, like contralabs "real market experience" ── -->
-<!-- ↓↓ Drop scattered paintings as images/paint-1.jpg, paint-2.jpg, paint-3.jpg ↓↓ -->
-<div class="floating-art" id="team-art">
+<!-- ── ABOUT ── -->
+<section class="section" id="about" aria-labelledby="about-heading">
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="section-eyebrow">Who We Are</span>
+      <h2 class="section-heading" id="about-heading">Two people on your<br/>account, <em>every week.</em></h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>ProMates is Sumedha and Anusha. We kept it small on purpose. We watched businesses pay agency retainers and get shuffled between account managers who barely knew their names — let alone their numbers. So we built the thing we'd want to hire.</p>
+
+        <p>Every business that works with us gets <strong>us</strong>. The same two people who built your campaign strategy, wrote your copy, and looked at your analytics this morning. Not an account manager who forwards your emails to a junior analyst you've never spoken to.</p>
+
+        <p>We work with US restaurants, e-commerce brands, and local service businesses that are ready to stop being invisible online. Not because their product is bad — but because nobody's found it yet.</p>
+
+        <div class="about-quote">
+          <p>"We don't have a junior team working your account. We are the team."</p>
+        </div>
+      </div>
+
+      <div class="about-images reveal reveal-d2">
+        <div class="about-img-main">
+          <img
+            src="images/paint-1.jpg"
+            alt="ProMates team at work"
+            loading="lazy"
+          />
+        </div>
+        <div class="about-img-accent">
+          <img
+            src="images/paint-2.jpg"
+            alt="ProMates founders"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FLOATING ART ── -->
+<div class="floating-art" aria-hidden="true">
   <div class="floating-art-inner">
-    <!-- Floating image 1: top-left -->
     <div class="paint-float pf-1">
-      <img src="images/paint-1.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
-      <div class="paint-float-ph" style="display:none;"><span>paint-1.jpg</span></div>
+      <img src="images/paint-1.jpg" alt="" loading="lazy" data-fallback="pf1-placeholder"/>
+      <div class="paint-float-ph hidden" id="pf1-placeholder"><span>paint-1.jpg</span></div>
     </div>
-    <!-- Floating image 2: center -->
     <div class="paint-float pf-2">
-      <img src="images/paint-2.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
-      <div class="paint-float-ph" style="display:none;"><span>paint-2.jpg</span></div>
+      <img src="images/paint-2.jpg" alt="" loading="lazy" data-fallback="pf2-placeholder"/>
+      <div class="paint-float-ph hidden" id="pf2-placeholder"><span>paint-2.jpg</span></div>
     </div>
-    <!-- Floating image 3: top-right -->
     <div class="paint-float pf-3">
-      <img src="images/paint-3.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
-      <div class="paint-float-ph" style="display:none;"><span>paint-3.jpg</span></div>
+      <img src="images/paint-3.jpg" alt="" loading="lazy" data-fallback="pf3-placeholder"/>
+      <div class="paint-float-ph hidden" id="pf3-placeholder"><span>paint-3.jpg</span></div>
     </div>
-    <!-- Center editorial text — like contralabs -->
-    <div class="floating-art-label reveal">Two women.<br/>Your inbox, handled.</div>
+    <div class="floating-art-label reveal">Every account.<br/>Both of us.</div>
   </div>
 </div>
 
-<!-- ── HOW IT WORKS ── -->
-<section class="section alt-bg">
+<!-- ── PROCESS ── -->
+<section class="section alt-bg" id="process" aria-labelledby="process-heading">
   <div class="section-inner">
     <div class="reveal" style="text-align:center;">
-      <span class="section-eyebrow" style="display:block;text-align:center;">The Process</span>
-      <h2 class="section-heading" style="text-align:center;">From chaos to control<br/><em>in 48 hours.</em></h2>
+      <span class="section-eyebrow" style="display:block;text-align:center;">How It Works</span>
+      <h2 class="section-heading" id="process-heading" style="text-align:center;">From first call to<br/><em>live in days.</em></h2>
     </div>
+
     <div class="process-grid reveal">
       <div class="process-step">
         <div class="step-num">01</div>
-        <div class="step-title">The Audit</div>
-        <p class="step-desc">We deep dive into your current workflows, pain points, and communication gaps.</p>
+        <div class="step-title">The Call</div>
+        <p class="step-desc">30 minutes. You talk about your business, we ask the uncomfortable questions. No pitch deck, no proposal. You don't pay for anything yet.</p>
       </div>
       <div class="process-step">
         <div class="step-num">02</div>
-        <div class="step-title">Strategy</div>
-        <p class="step-desc">Custom response playbooks designed for your specific brand voice and audience.</p>
+        <div class="step-title">The Audit</div>
+        <p class="step-desc">We go through your existing channels — what's working, what's costing you, what's missing. You get a 90-day plan before we touch anything.</p>
       </div>
       <div class="process-step">
         <div class="step-num">03</div>
-        <div class="step-title">Deployment</div>
-        <p class="step-desc">Our team integrates seamlessly into your existing tech stack within 48 hours.</p>
+        <div class="step-title">Execution</div>
+        <p class="step-desc">Campaigns go live, content goes out, reporting starts. Weekly check-ins — not monthly surprises where you find out three weeks of spend was wasted.</p>
       </div>
       <div class="process-step">
         <div class="step-num">04</div>
-        <div class="step-title">Scale</div>
-        <p class="step-desc">Real-time reporting, continuous optimization, and zero inbox debt. Ever.</p>
+        <div class="step-title">Improve</div>
+        <p class="step-desc">What isn't working gets cut. What is working gets more. We don't hide in spreadsheets — you'll always know what we're doing and why.</p>
       </div>
     </div>
   </div>
 </section>
-
-<!-- ── PILOT / ABOUT ── -->
-<section class="section" id="pilot">
-  <div class="section-inner">
-    <div class="reveal">
-      <span class="section-eyebrow">Why Trust Us</span>
-      <h2 class="section-heading">We're just starting —<br/><em>and honest about it.</em></h2>
-      <p class="section-sub">ProMates launched in 2026. We don't have 140 clients or a million DMs — not yet. What we do have is two people who will respond to your customers at 11pm and send you a clean report Monday morning. That's the pitch.</p>
-    </div>
-    <div class="pilot-grid">
-      <div class="pilot-cell reveal">
-        <span class="pilot-eyebrow">What You Get</span>
-        <div class="benefit-list">
-          <div class="benefit-item"><span class="b-arrow teal">→</span>Every Google Review &amp; DM answered within hours — not days</div>
-          <div class="benefit-item"><span class="b-arrow teal">→</span>A weekly inbox report so you always know what customers are saying</div>
-          <div class="benefit-item"><span class="b-arrow teal">→</span>Two real humans — Sumedha &amp; Anusha — not a chatbot or outsourced team</div>
-          <div class="benefit-item"><span class="b-arrow teal">→</span>Cancel any time — no long contracts, no setup fees</div>
-        </div>
-      </div>
-      <div class="pilot-cell featured reveal reveal-d1">
-        <span class="pilot-eyebrow">2026 Pilot Program</span>
-        <div class="pilot-big">5 spots.<br/>First month<br/><span class="teal-hi">half price.</span></div>
-        <p class="pilot-body">We're offering our first 5 clients 50% off month one. In exchange, we ask for honest feedback. No pressure. No lock-in.</p>
-        <button class="btn-pilot" onclick="window.location.href='mailto:hello@heypromates.com?subject=Pilot%20Program%20Application'">Apply for a Pilot Spot</button>
-      </div>
-      <div class="pilot-cell reveal reveal-d2">
-        <span class="pilot-eyebrow">What We Need From You</span>
-        <div class="benefit-list">
-          <div class="benefit-item"><span class="b-arrow muted">→</span>Access to your Google Business inbox or Instagram DMs</div>
-          <div class="benefit-item"><span class="b-arrow muted">→</span>15 minutes to brief us on your brand tone</div>
-          <div class="benefit-item"><span class="b-arrow muted">→</span>Honest feedback at the end of month one</div>
-        </div>
-        <div class="divider-note">Best fit: US restaurants, e-commerce shops, and local service businesses.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── PRICING ── -->
-<section class="section alt-bg" id="pricing">
-  <div class="section-inner">
-    <div class="reveal" style="text-align:center;">
-      <span class="section-eyebrow" style="display:block;text-align:center;">Transparent Pricing</span>
-      <h2 class="section-heading" style="text-align:center;">No surprises.<br/><em>No hidden fees.</em></h2>
-      <p style="font-size:15px;color:var(--ink-2);font-weight:300;">Two plans. Clear deliverables. Cancel any time.</p>
-    </div>
-    <div class="pricing-grid">
-      <div class="price-card reveal">
-        <span class="price-tier">Starter</span>
-        <div class="price-amount">$300<span class="price-period">/mo</span></div>
-        <p class="price-desc">Best for restaurants &amp; local businesses getting started with inbox management.</p>
-        <div class="price-features">
-          <div class="price-feature"><span class="check">✓</span> Google Reviews &amp; DM responses</div>
-          <div class="price-feature"><span class="check">✓</span> Weekly inbox report</div>
-          <div class="price-feature"><span class="check">✓</span> Response within 4 hours</div>
-          <div class="price-feature"><span class="check">✓</span> 1 platform (Google or Instagram)</div>
-          <div class="price-feature"><span class="dash">–</span> Complaint escalation handling</div>
-          <div class="price-feature"><span class="dash">–</span> Priority email support</div>
-        </div>
-        <button class="btn-price" onclick="window.location.href='mailto:hello@heypromates.com?subject=Starter%20Plan%20Inquiry'">Get Started — $300/mo</button>
-      </div>
-      <div class="price-card featured reveal reveal-d1">
-        <div class="price-badge">Most Popular</div>
-        <span class="price-tier teal">Growth</span>
-        <div class="price-amount">$500<span class="price-period">/mo</span></div>
-        <p class="price-desc">For businesses ready to take reputation management seriously across multiple channels.</p>
-        <div class="price-features">
-          <div class="price-feature"><span class="check">✓</span> Everything in Starter</div>
-          <div class="price-feature"><span class="check">✓</span> Up to 3 platforms covered</div>
-          <div class="price-feature"><span class="check">✓</span> Response within 2 hours</div>
-          <div class="price-feature"><span class="check">✓</span> Complaint escalation handling</div>
-          <div class="price-feature"><span class="check">✓</span> Priority email support</div>
-          <div class="price-feature"><span class="check">✓</span> Monthly strategy call (30 min)</div>
-        </div>
-        <button class="btn-price primary" onclick="window.location.href='mailto:hello@heypromates.com?subject=Growth%20Plan%20Inquiry'">Get Started — $500/mo</button>
-      </div>
-    </div>
-    <p class="pricing-note">No setup fee · Cancel any time · First month 50% off for pilot clients</p>
-  </div>
-</section>
-
-<!-- ── CONTACT FLOATING ART BAND — paintings near contact/CTA ── -->
-<!-- ↓↓ These reuse your paint-1.jpg through paint-3.jpg (or use different ones) ↓↓ -->
-<div class="contact-art" id="contact-art">
-  <div class="contact-art-inner">
-    <!-- Painting 1 — far left -->
-    <div class="ca-paint cap-1">
-      <img src="images/paint-1.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
-      <div class="ca-paint-ph" style="display:none;"><span>paint-1.jpg</span></div>
-    </div>
-    <!-- Painting 2 — inner left -->
-    <div class="ca-paint cap-2">
-      <img src="images/paint-2.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
-      <div class="ca-paint-ph" style="display:none;"><span>paint-2.jpg</span></div>
-    </div>
-    <!-- Center text -->
-    <div class="contact-art-text reveal" style="position:relative;z-index:2;">
-      <span class="section-eyebrow">With real human attention</span>
-      <h2 class="section-heading">Two women.<br/><em>One mission.</em></h2>
-      <p>Sumedha &amp; Anusha — real people who show up for your business every single day.</p>
-      <button class="btn-primary" onclick="document.getElementById('contact-cta').scrollIntoView({behavior:'smooth'})">Get in Touch</button>
-    </div>
-    <!-- Painting 3 — inner right -->
-    <div class="ca-paint cap-3">
-      <img src="images/paint-3.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
-      <div class="ca-paint-ph" style="display:none;"><span>paint-3.jpg</span></div>
-    </div>
-  </div>
-</div>
 
 <!-- ── CTA ── -->
-<section class="cta-section" id="contact-cta">
-  <div class="cta-blob"></div>
-  <div class="cta-blob-2"></div>
+<section class="cta-section" id="contact" aria-labelledby="cta-heading">
+  <div class="cta-blob" aria-hidden="true"></div>
+  <div class="cta-blob-2" aria-hidden="true"></div>
   <div class="cta-inner reveal">
-    <span class="cta-eyebrow">Zero Risk. Maximum Upside.</span>
-    <h2 class="cta-heading">Ready to reclaim<br/>your <em>time?</em></h2>
-    <p class="cta-sub">Your first call is completely free. No strings attached — just a 15-minute strategy session to show you exactly what we can take off your plate.</p>
+    <span class="cta-eyebrow">No sales deck. No proposal. Just a conversation.</span>
+    <h2 class="cta-heading" id="cta-heading">Book a free call. We'll tell you<br/>exactly <em>what we'd do first.</em></h2>
+    <p class="cta-sub">If we're not the right fit for what you need, we'll tell you that too. No hard sell, no follow-up sequence.</p>
     <div class="cta-actions">
-      <button class="btn-cta" onclick="window.location.href='mailto:hello@heypromates.com?subject=Free%2015-Minute%20Strategy%20Call'">Book a Free 15-Min Call</button>
-      <button class="btn-cta-ghost" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">See Pricing</button>
+      <button class="btn-cta" data-magnetic data-mailto="hello@heypromates.com?subject=Free%20Strategy%20Call%20Request">Book a Free Call</button>
+      <button class="btn-cta-ghost" data-scroll-to="services">See Our Services</button>
     </div>
-    <p class="cta-foot">hello@heypromates.com &nbsp;·&nbsp; No credit card · No commitment</p>
+    <p class="cta-foot">hello@heypromates.com &nbsp;·&nbsp; No commitment · No credit card</p>
   </div>
 </section>
 
 <!-- ── FOOTER ── -->
-<footer>
+<footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-grid">
       <div>
-        <a href="#" class="nav-logo" style="margin-bottom:0;">
+        <a href="#" class="nav-logo" style="margin-bottom:0;" aria-label="ProMates home">
           <div class="logo-mark" style="background:var(--teal);">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -896,78 +469,52 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,.05);padding:
           </div>
           <span class="logo-text" style="color:rgba(255,255,255,.88);">Pro<span class="accent" style="color:#7DFFE8;">Mates</span></span>
         </a>
-        <p class="footer-tagline">Two people. One mission. Your inbox handled. Serving US restaurants, e-commerce, and local service businesses.</p>
+        <p class="footer-tagline">Digital marketing for US restaurants, e-commerce, and local businesses. Two people. Direct line. Real results.</p>
       </div>
+
       <div>
-        <span class="footer-col-title">Platform</span>
+        <span class="footer-col-title">Services</span>
         <ul class="footer-links">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact-cta">Book a Call</a></li>
+          <li><a href="#services">SEO</a></li>
+          <li><a href="#services">Paid Advertising</a></li>
+          <li><a href="#services">Social Media</a></li>
+          <li><a href="#services">Content Marketing</a></li>
+          <li><a href="#services">Email Marketing</a></li>
+          <li><a href="#services">Analytics</a></li>
         </ul>
       </div>
+
+      <div>
+        <span class="footer-col-title">Company</span>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#process">How We Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
       <div>
         <span class="footer-col-title">Legal</span>
         <ul class="footer-links">
           <li><a href="#">Privacy Policy</a></li>
           <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Cookies</a></li>
         </ul>
-      </div>
-      <div>
+        <br/>
         <span class="footer-col-title">Contact</span>
         <ul class="footer-links">
           <li><a href="mailto:hello@heypromates.com">hello@heypromates.com</a></li>
-          <li><a href="#">Sumedha &amp; Anusha</a></li>
         </ul>
         <p style="font-size:13px;color:rgba(255,255,255,.2);margin-top:16px;font-weight:300;">US Market · Restaurants &amp; E-commerce</p>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <span class="footer-copy">© 2026 ProMates Agency. All rights reserved.</span>
+      <span class="footer-copy">© 2026 ProMates. All rights reserved.</span>
       <span class="footer-badge">BUILT FOR FOUNDERS. RUN BY HUMANS.</span>
     </div>
   </div>
 </footer>
 
-<script>
-(function(){
-  const hamBtn = document.getElementById('ham-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  hamBtn.addEventListener('click', () => {
-    const open = hamBtn.classList.toggle('open');
-    hamBtn.setAttribute('aria-expanded', open);
-    mobileMenu.classList.toggle('open', open);
-  });
-  mobileMenu.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('click', () => {
-      hamBtn.classList.remove('open');
-      hamBtn.setAttribute('aria-expanded', false);
-      mobileMenu.classList.remove('open');
-    });
-  });
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
-      const id = link.getAttribute('href');
-      const target = document.querySelector(id);
-      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
-    });
-  });
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-    });
-  }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-  document.querySelectorAll('.hero .reveal').forEach((el, i) => {
-    setTimeout(() => el.classList.add('visible'), 80 + i * 180);
-  });
-  const nav = document.getElementById('main-nav');
-  window.addEventListener('scroll', () => {
-    nav.style.borderBottomColor = window.scrollY > 40 ? 'rgba(28,25,22,0.14)' : 'rgba(28,25,22,0.08)';
-  }, { passive: true });
-})();
-</script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
