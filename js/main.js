@@ -50,12 +50,14 @@
     }, { passive: true });
   }
 
-  /* ── Nav border on scroll ── */
+  /* ── Nav: solid background on scroll (like Contra Labs) ── */
   const nav = document.getElementById('main-nav');
   window.addEventListener('scroll', () => {
-    nav.style.borderBottomColor = window.scrollY > 40
-      ? 'rgba(28,25,22,0.16)'
-      : 'rgba(28,25,22,0.08)';
+    if (window.scrollY > 60) {
+      nav.classList.add('nav-scrolled');
+    } else {
+      nav.classList.remove('nav-scrolled');
+    }
   }, { passive: true });
 
   /* ── Hero headline: line-by-line reveal ── */

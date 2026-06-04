@@ -74,43 +74,35 @@
 <!-- Scroll progress indicator -->
 <div id="scroll-progress" aria-hidden="true"></div>
 
-<!-- Left bookmark ribbon -->
-<div class="ribbon" aria-hidden="true">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-    <polyline points="22,6 12,13 2,6"/>
-  </svg>
-</div>
-
-<!-- ── NAV ── -->
-<nav id="main-nav" role="navigation" aria-label="Main navigation">
+<!-- ── NAV (Contra Labs style) ── -->
+<header id="main-nav">
   <div class="nav-inner">
-    <a href="#" class="nav-logo" aria-label="ProMates home">
-      <div class="logo-mark">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-          <polyline points="22,6 12,13 2,6"/>
+    <!-- Logo -->
+    <a href="#top" class="nav-logo" aria-label="ProMates home">
+      <div class="logo-bookmark">
+        <svg viewBox="0 0 16 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h16v20l-8-5-8 5V0z"/>
+        </svg>
+        <svg class="logo-star" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 0l1.6 6.4L16 8l-6.4 1.6L8 16l-1.6-6.4L0 8l6.4-1.6L8 0z" fill="white"/>
         </svg>
       </div>
-      <span class="logo-text">Pro<span class="accent">Mates</span></span>
+      <span class="logo-text">Pro<strong>Mates</strong></span>
     </a>
 
+    <!-- Desktop nav links -->
     <nav class="nav-links" aria-label="Site sections">
       <a href="#services">Services</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
 
-    <button class="btn-nav" data-magnetic data-scroll-to="contact">Let's Talk</button>
-
-    <!-- Hamburger button (mobile only) -->
-    <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-      <span></span>
-      <span></span>
-      <span></span>
+    <!-- Hamburger (mobile) -->
+    <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
     </button>
   </div>
-</nav>
+</header>
 
 <!-- Mobile menu overlay -->
 <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
@@ -121,8 +113,15 @@
     <a href="#services" class="mobile-link">Services</a>
     <a href="#about" class="mobile-link">About</a>
     <a href="#contact" class="mobile-link">Contact</a>
-    <button class="btn-primary mobile-cta" data-scroll-to="contact">Let's Talk</button>
   </nav>
+</div>
+
+<!-- Left bookmark ribbon -->
+<div class="ribbon" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+    <polyline points="22,6 12,13 2,6"/>
+  </svg>
 </div>
 
 <!-- ── HERO ── -->
@@ -137,7 +136,7 @@
       <span class="line-wrap"><span class="line line-d3">people find it.</span></span>
     </h1>
 
-    <p class="hero-sub">We run SEO, paid ads, social media, and content for US businesses. Sumedha and Anusha — two people on your account, no handoffs, direct line.</p>
+    <p class="hero-sub">We run paid ads, social media and content for businesses. Sumedha and Anusha — two people on your account, no handoffs, direct line.</p>
 
     <div class="hero-actions">
       <button class="btn-primary" data-magnetic data-scroll-to="contact">Let's Talk</button>
@@ -217,7 +216,7 @@
       </div>
 
       <div class="service-card-img reveal reveal-d1">
-        <div class="sci-bg" style="background-image:url('images/print 21.jpeg')"></div>
+        <div class="sci-bg" style="background-image:url('images/pic 4.jpeg')"></div>
         <div class="sci-teal-line"></div>
         <span class="sci-label">03 · Social</span>
         <div class="sci-content">
@@ -227,7 +226,7 @@
       </div>
 
       <div class="service-card-img reveal reveal-d2">
-        <div class="sci-bg" style="background-image:url('images/print 16.jpeg')"></div>
+        <div class="sci-bg" style="background-image:url('images/print 24.jpeg')"></div>
         <div class="sci-teal-line"></div>
         <span class="sci-label">04 · Content</span>
         <div class="sci-content">
@@ -438,12 +437,10 @@
       <div>
         <span class="footer-col-title">Services</span>
         <ul class="footer-links">
-          <li><a href="#services">SEO</a></li>
           <li><a href="#services">Paid Advertising</a></li>
           <li><a href="#services">Social Media</a></li>
           <li><a href="#services">Content Marketing</a></li>
-          <li><a href="#services">Email Marketing</a></li>
-          <li><a href="#services">Analytics</a></li>
+         
         </ul>
       </div>
 
