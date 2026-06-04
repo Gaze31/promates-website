@@ -1,5 +1,45 @@
 (function () {
 
+  /* ── Hamburger / mobile menu ── */
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const mobileMenu   = document.getElementById('mobile-menu');
+
+  function openMenu() {
+    hamburgerBtn.classList.add('is-open');
+    mobileMenu.classList.add('is-open');
+    hamburgerBtn.setAttribute('aria-expanded', 'true');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    hamburgerBtn.classList.remove('is-open');
+    mobileMenu.classList.remove('is-open');
+    hamburgerBtn.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  if (hamburgerBtn && mobileMenu) {
+    hamburgerBtn.addEventListener('click', () => {
+      hamburgerBtn.classList.contains('is-open') ? closeMenu() : openMenu();
+    });
+
+    // Close button inside the overlay
+    const closeBtn = document.getElementById('mobile-menu-close');
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+
+    // Close when a mobile link is tapped
+    mobileMenu.querySelectorAll('.mobile-link, .mobile-cta').forEach(el => {
+      el.addEventListener('click', closeMenu);
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeMenu();
+    });
+  }
+
   /* ── Scroll progress bar ── */
   const progressBar = document.getElementById('scroll-progress');
   if (progressBar) {
@@ -34,22 +74,6 @@
     }, { passive: true });
   }
 
-  /* ── Mobile hamburger ── */
-  const hamBtn = document.getElementById('ham-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  hamBtn.addEventListener('click', () => {
-    const open = hamBtn.classList.toggle('open');
-    hamBtn.setAttribute('aria-expanded', String(open));
-    mobileMenu.classList.toggle('open', open);
-  });
-  mobileMenu.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('click', () => {
-      hamBtn.classList.remove('open');
-      hamBtn.setAttribute('aria-expanded', 'false');
-      mobileMenu.classList.remove('open');
-    });
-  });
-
   /* ── Smooth scroll for anchor links ── */
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
@@ -72,6 +96,26 @@
       window.location.href = 'mailto:' + btn.dataset.mailto;
     });
   });
+
+  /* ── Gallery drag-to-scroll ── */
+  const galleryScroll = document.querySelector('.gallery-scroll');
+  if (galleryScroll) {
+    let isDown = false, startX, scrollLeft;
+    galleryScroll.addEventListener('mousedown', e => {
+      isDown = true;
+      galleryScroll.classList.add('is-dragging');
+      startX = e.pageX - galleryScroll.offsetLeft;
+      scrollLeft = galleryScroll.scrollLeft;
+    });
+    galleryScroll.addEventListener('mouseleave', () => { isDown = false; galleryScroll.classList.remove('is-dragging'); });
+    galleryScroll.addEventListener('mouseup', () => { isDown = false; galleryScroll.classList.remove('is-dragging'); });
+    galleryScroll.addEventListener('mousemove', e => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - galleryScroll.offsetLeft;
+      galleryScroll.scrollLeft = scrollLeft - (x - startX) * 1.4;
+    });
+  }
 
   /* ── Image error fallbacks ── */
   document.querySelectorAll('img[data-fallback]').forEach(img => {
